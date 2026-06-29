@@ -3805,7 +3805,7 @@ html{
 
     align-items:center;
 
-    gap:90px;
+    gap:20px;
 
     width:max-content;
 
@@ -3823,25 +3823,51 @@ html{
 
 /* Logo */
 
+.footer-grid img{ 
+    background-color: white;
+}
+
+/*=========================================
+            BRAND ITEM
+=========================================*/
+
 .brand-item{
+
+    width:180px;
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     flex-shrink:0;
 
 }
 
+/* Logo */
+
 .brand-item img{
 
-    height:55px;
+    width:140px;
 
-    width:auto;
+    height:50px;
+
+    object-fit:contain;
+
+    object-position:center;
 
     filter:grayscale(100%);
 
     opacity:.75;
 
-    transition:.35s;
+    transition:.35s ease;
 
 }
+
+/* Hover */
 
 .brand-item:hover img{
 
