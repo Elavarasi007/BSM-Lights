@@ -9,6 +9,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⭐</text></svg>">
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -18,6 +19,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 <!-- Site CSS -->
 <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 <body>
 
@@ -28,173 +30,769 @@
   <div class="loader-pct">0%</div>
 </div>
 
-<!-- ============ HEADER ============ -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="index.html" class="logo">
-      <span class="dot"></span>
-      <div>
-        BSM<span>.</span>
-        <small>Lighting Innovation</small>
-      </div>
-    </a>
+<!-- =========================
+        HEADER
+========================= -->
 
-    <div class="burger" id="burger"><span></span><span></span><span></span></div>
+<header class="header">
 
-    <nav class="main-nav">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li>
-          <a href="products.html">Products <i class="fa-solid fa-chevron-down" style="font-size:10px"></i></a>
-          <div class="mega">
-            <a href="products.html?cat=beam"><i class="fa-solid fa-lightbulb"></i> Beam Lights</a>
-            <a href="products.html?cat=wash"><i class="fa-solid fa-water"></i> Wash Lights</a>
-            <a href="products.html?cat=ledpar"><i class="fa-solid fa-circle-dot"></i> LED PAR</a>
-            <a href="products.html?cat=laser"><i class="fa-solid fa-bolt"></i> Laser Systems</a>
-            <a href="products.html?cat=strobe"><i class="fa-solid fa-bolt-lightning"></i> Strobe Lights</a>
-            <a href="products.html?cat=controller"><i class="fa-solid fa-sliders"></i> Controllers</a>
-            <a href="products.html?cat=dmx"><i class="fa-solid fa-diagram-project"></i> DMX Solutions</a>
-            <a href="products.html?cat=audio"><i class="fa-solid fa-volume-high"></i> Pro Audio</a>
-          </div>
-        </li>
-        <li>
-          <a href="solutions.html">Solutions <i class="fa-solid fa-chevron-down" style="font-size:10px"></i></a>
-          <div class="mega">
-            <a href="solutions.html#dj"><i class="fa-solid fa-music"></i> DJ &amp; Club Lighting</a>
-            <a href="solutions.html#stage"><i class="fa-solid fa-people-group"></i> Stage &amp; Concert</a>
-            <a href="solutions.html#wedding"><i class="fa-solid fa-heart"></i> Wedding Lighting</a>
-            <a href="solutions.html#architecture"><i class="fa-solid fa-building"></i> Architectural</a>
-            <a href="solutions.html#theatre"><i class="fa-solid fa-masks-theater"></i> Theatre Lighting</a>
-            <a href="solutions.html#rental"><i class="fa-solid fa-truck"></i> Rental Solutions</a>
-          </div>
-        </li>
-        <li><a href="projects.html">Projects</a></li>
-        <li>
-          <a href="downloads.html">Downloads <i class="fa-solid fa-chevron-down" style="font-size:10px"></i></a>
-          <div class="mega">
-            <a href="downloads.html"><i class="fa-solid fa-file-pdf"></i> Brochures &amp; Manuals</a>
-            <a href="software.html"><i class="fa-solid fa-download"></i> Software Downloads</a>
-            <a href="downloads.html#dmx"><i class="fa-solid fa-table"></i> DMX Charts</a>
-            <a href="downloads.html#certs"><i class="fa-solid fa-certificate"></i> Certificates</a>
-          </div>
-        </li>
-        <li><a href="dealers.html">Dealers</a></li>
-        <li><a href="news.html">News &amp; Expo</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div class="container">
 
-    <div class="header-actions">
-      <div class="search-box">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="Search by model number...">
-      </div>
-      <a href="https://wa.me/919876543210" target="_blank" class="icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-      <a href="contact.html" class="btn btn-primary btn-sm magnetic">Get Quote</a>
+        <div class="header-grid">
+
+            <!-- =========================
+                    LOGO
+            ========================== -->
+
+            <div class="logo-area">
+
+                <a href="index.html" class="logo">
+
+                    <img src="assets/images/bsm logo.webp"
+                         alt="BSM Lighting Innovation">
+
+                </a>
+
+            </div>
+
+            <!-- =========================
+                    TOP RIGHT
+            ========================== -->
+
+            <div class="header-top">
+
+                <div class="header-actions">
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input
+                            type="text"
+                            placeholder="Search by model number..."
+                        >
+
+                    </div>
+
+                    <a href="#" class="whatsapp-btn">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </a>
+
+                    <a href="contact.html" class="quote-btn">
+
+                        GET QUOTE
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- =========================
+                    BOTTOM MENU
+            ========================== -->
+
+            <div class="header-bottom">
+
+                <nav class="navbar">
+
+                    <ul class="nav-menu">
+
+                        <li><a href="index.html" class="active">Home</a></li>
+
+                        <li><a href="about.html">About BSM</a></li>
+
+                        <li class="dropdown">
+
+                            <a href="products.html">
+
+                                Products
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li><a href="#">Moving Head</a></li>
+                                <li><a href="#">Beam Lights</a></li>
+                                <li><a href="#">Wash Lights</a></li>
+                                <li><a href="#">LED PAR</a></li>
+                                <li><a href="#">Laser</a></li>
+                                <li><a href="#">Controller</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li class="dropdown">
+
+                            <a href="solutions.html">
+
+                                Solutions
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li><a href="#">Concert</a></li>
+                                <li><a href="#">Stage</a></li>
+                                <li><a href="#">Wedding</a></li>
+                                <li><a href="#">Architecture</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li><a href="projects.html">Projects</a></li>
+
+                        <li class="dropdown">
+
+                            <a href="downloads.html">
+
+                                Downloads
+
+                                <i class="fa-solid fa-chevron-down"></i>
+
+                            </a>
+
+                            <ul class="dropdown-menu">
+
+                                <li><a href="#">Brochure</a></li>
+                                <li><a href="#">Catalogue</a></li>
+                                <li><a href="#">Firmware</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li><a href="dealers.html">Dealers</a></li>
+
+                        <li><a href="news.html">News & Expo</a></li>
+
+                        <li><a href="contact.html">Contact</a></li>
+
+                    </ul>
+
+                </nav>
+
+            </div>
+
+            <!-- =========================
+                    MOBILE MENU
+            ========================== -->
+
+            <div class="menu-toggle">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </header>
-<!-- ============ PAGE HERO ============ -->
-<section class="page-hero">
-  <div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1920&q=80')"></div>
-  <div class="hero-overlay"></div>
-  <div class="container" style="position:relative;z-index:2">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span><span>About</span></div>
-    <h1 style="margin-top:18px">About <span class="text-orange">BSM</span></h1>
-    <p>Lighting innovation through technology and creativity — we deliver world-class professional lighting that empowers events, performances and architectural spaces with brilliance.</p>
-  </div>
+
+<!--=========================================
+                ABOUT HERO
+==========================================-->
+
+
+<section class="about-hero">
+
+    <!-- Background -->
+
+    <div class="about-hero-bg">
+
+        <img src="assets/images/about/about_hero.webp"
+             alt="BSM Lighting">
+
+    </div>
+
+    <!-- Overlay -->
+
+    <div class="about-hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="about-hero-content">
+
+            <div class="breadcrumb">
+
+                <a href="index.html">
+
+                    Home
+
+                </a>
+
+                <span>
+
+                    <i class="fa-solid fa-angle-right"></i>
+
+                </span>
+
+                <span class="active">
+
+                    About BSM
+
+                </span>
+
+            </div>
+
+            <span class="hero-tag">
+
+                LIGHTING INNOVATION
+
+            </span>
+
+            <h1>
+
+                About
+
+                <span>BSM Lighting</span>
+
+            </h1>
+
+            <p>
+
+                Delivering innovative professional lighting solutions
+                with cutting-edge technology, superior performance,
+                and unmatched quality for concerts, events,
+                architectural lighting and entertainment industries.
+
+            </p>
+
+        </div>
+
+    </div>
+
 </section>
 
-<!-- ============ OVERVIEW ============ -->
-<section class="section-pad">
-  <div class="container split">
-    <div data-reveal>
-      <span class="tag">Who We Are</span>
-      <h2 class="split-text">Leaders In Professional Lighting Solutions</h2>
-      <p style="color:var(--text-soft);margin:20px 0;font-size:16px">BSM Lighting Innovation is a leading provider of professional entertainment, stage, architectural and commercial lighting solutions. We specialize in delivering innovative products and technologies that create unforgettable visual experiences for concerts, events, theatres, clubs, weddings, corporate functions and architectural projects.</p>
-      <p style="color:var(--text-soft);font-size:16px">Our commitment is to provide reliable, high-performance products that empower lighting professionals, event organizers, rental companies and system integrators to bring their creative visions to life. With a strong dealer network and dedicated technical support, BSM continues to deliver excellence through cutting-edge technology, superior quality and customer-focused solutions.</p>
-      <div class="feature-list" style="grid-template-columns:1fr">
-        <div class="feature-item"><div class="ic"><i class="fa-solid fa-industry"></i></div><div><h5>In-House Engineering</h5><p>Designed, tested and assembled with rigorous QA.</p></div></div>
-        <div class="feature-item"><div class="ic"><i class="fa-solid fa-handshake"></i></div><div><h5>500+ Global Dealers</h5><p>A trusted distribution network across 50+ countries.</p></div></div>
-      </div>
+
+<!--=========================================
+            COMPANY OVERVIEW
+==========================================-->
+
+<section class="about-overview section-pad">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <!-- Left Image -->
+
+            <div class="about-image">
+
+                <div class="image-box">
+
+                    <img src="assets/images/about/about-company.jpg" alt="BSM Lighting">
+
+                </div>
+
+                <div class="experience-card">
+
+                    <h3>15+</h3>
+
+                    <span>Years Of Excellence</span>
+
+                </div>
+
+            </div>
+
+            <!-- Right Content -->
+
+            <div class="about-content">
+
+                <span class="section-tag">
+
+                    WHO WE ARE
+
+                </span>
+
+                <h2>
+
+                    Leaders In
+
+                    <span>Professional Lighting</span>
+
+                    Solutions
+
+                </h2>
+
+                <p>
+
+                    BSM Lighting Innovation is one of India's leading manufacturers and suppliers of professional stage, entertainment, architectural and commercial lighting systems. We deliver innovative lighting technologies designed for concerts, theatres, television studios, clubs, hotels, wedding venues and large-scale events.
+
+                </p>
+
+                <p>
+
+                    Our mission is to empower lighting professionals with premium-quality fixtures, intelligent control systems, dependable technical support and continuous innovation. Today, BSM products are trusted by dealers, rental partners and lighting designers across the globe.
+
+                </p>
+
+                <div class="overview-features">
+
+                    <div class="overview-item">
+
+                        <div class="overview-icon">
+
+                            <i class="fa-solid fa-microchip"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>Advanced Technology</h4>
+
+                            <p>Latest lighting innovations built for professional applications.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="overview-item">
+
+                        <div class="overview-icon">
+
+                            <i class="fa-solid fa-users"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>500+ Dealer Network</h4>
+
+                            <p>Strong distribution and service support across multiple countries.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="overview-item">
+
+                        <div class="overview-icon">
+
+                            <i class="fa-solid fa-award"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>Premium Quality</h4>
+
+                            <p>Reliable performance with strict quality standards and testing.</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="overview-item">
+
+                        <div class="overview-icon">
+
+                            <i class="fa-solid fa-headset"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>Technical Support</h4>
+
+                            <p>Dedicated experts to help before and after every installation.</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <a href="contact.html" class="about-btn">
+
+                    Contact Our Team
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
-    <div class="split-media" data-reveal>
-      <div class="float-shape fs-1"></div>
-      <div class="img-wrap" style="height:520px"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=900&q=80" alt="BSM headquarters building"></div>
-    </div>
-  </div>
+
 </section>
 
-<!-- ============ CORE VALUES ============ -->
-<section class="section-pad" style="padding-top:0">
-  <div class="container">
-    <div class="section-head center" data-reveal><span class="tag">Our Core Values</span><h2>What Drives <span class="text-orange">Us Forward</span></h2></div>
-    <div class="values-strip" data-stagger>
-      <div class="value-item"><i class="fa-solid fa-gem"></i><h5>Quality</h5></div>
-      <div class="value-item"><i class="fa-solid fa-lightbulb"></i><h5>Innovation</h5></div>
-      <div class="value-item"><i class="fa-solid fa-people-group"></i><h5>Customer Focus</h5></div>
-      <div class="value-item"><i class="fa-solid fa-shield-halved"></i><h5>Reliability</h5></div>
-      <div class="value-item"><i class="fa-solid fa-handshake"></i><h5>Partnership</h5></div>
-      <div class="value-item"><i class="fa-solid fa-earth-americas"></i><h5>Global Vision</h5></div>
+
+
+<!--=========================================
+            CORE VALUES
+==========================================-->
+
+<section class="core-values section-pad">
+
+    <div class="container">
+
+        <div class="section-head center">
+
+            <span class="section-tag">
+
+                OUR CORE VALUES
+
+            </span>
+
+            <h2>
+
+                What Drives
+
+                <span>BSM Forward</span>
+
+            </h2>
+
+            <p>
+
+                Every lighting solution we create is inspired by innovation,
+                quality, trust and long-term customer relationships.
+
+            </p>
+
+        </div>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+
+                <div class="value-icon">
+
+                    <i class="fa-solid fa-gem"></i>
+
+                </div>
+
+                <h4>Premium Quality</h4>
+
+                <p>High-performance lighting products built with strict quality standards.</p>
+
+            </div>
+
+            <div class="value-card">
+
+                <div class="value-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <h4>Innovation</h4>
+
+                <p>Developing next-generation lighting technologies for every application.</p>
+
+            </div>
+
+            <div class="value-card">
+
+                <div class="value-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <h4>Customer Focus</h4>
+
+                <p>Creating long-lasting relationships through excellent service and support.</p>
+
+            </div>
+
+            <div class="value-card">
+
+                <div class="value-icon">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                </div>
+
+                <h4>Reliability</h4>
+
+                <p>Consistent performance you can trust for every project and installation.</p>
+
+            </div>
+
+            <div class="value-card">
+
+                <div class="value-icon">
+
+                    <i class="fa-solid fa-handshake"></i>
+
+                </div>
+
+                <h4>Partnership</h4>
+
+                <p>Working closely with dealers, distributors and lighting professionals.</p>
+
+            </div>
+
+            <div class="value-card">
+
+                <div class="value-icon">
+
+                    <i class="fa-solid fa-earth-americas"></i>
+
+                </div>
+
+                <h4>Global Vision</h4>
+
+                <p>Delivering innovative lighting solutions to customers worldwide.</p>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
-<!-- ============ VISION & MISSION ============ -->
-<section class="section-pad" style="background:var(--bg-alt)">
-  <div class="container">
-    <div class="vm-grid" data-stagger>
-      <div class="vm-card"><div class="ic"><i class="fa-solid fa-eye"></i></div><h3>Our Vision</h3><p style="color:var(--text-soft);margin-top:14px">To become a globally recognized brand in entertainment and architectural lighting by delivering innovative solutions that inspire creativity and transform experiences.</p></div>
-      <div class="vm-card"><div class="ic"><i class="fa-solid fa-bullseye"></i></div><h3>Our Mission</h3>
-        <ul class="pd-list" style="margin-top:14px">
-          <li><i class="fa-solid fa-check"></i> Provide world-class lighting and audio products with exceptional quality.</li>
-          <li><i class="fa-solid fa-check"></i> Continuously innovate through advanced technology and modern design.</li>
-          <li><i class="fa-solid fa-check"></i> Build long-term partnerships with dealers, professionals and customers.</li>
-          <li><i class="fa-solid fa-check"></i> Contribute to the growth of the entertainment lighting industry worldwide.</li>
-        </ul>
-      </div>
+
+<!--=========================================
+            VISION & MISSION
+==========================================-->
+
+<section class="vision-mission section-pad">
+
+    <div class="container">
+
+        <div class="section-head center">
+
+            <span class="section-tag">
+
+                OUR PURPOSE
+
+            </span>
+
+            <h2>
+
+                Vision &
+
+                <span>Mission</span>
+
+            </h2>
+
+            <p>
+
+                We are committed to delivering innovative lighting solutions that inspire creativity, empower professionals and build long-lasting customer relationships.
+
+            </p>
+
+        </div>
+
+        <div class="vm-grid">
+
+            <!-- Vision -->
+
+            <div class="vm-card">
+
+                <div class="vm-icon">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                </div>
+
+                <h3>
+
+                    Our Vision
+
+                </h3>
+
+                <p>
+
+                    To become a globally recognized leader in professional entertainment and architectural lighting by delivering innovative technologies that transform experiences and inspire creativity worldwide.
+
+                </p>
+
+            </div>
+
+            <!-- Mission -->
+
+            <div class="vm-card">
+
+                <div class="vm-icon">
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                </div>
+
+                <h3>
+
+                    Our Mission
+
+                </h3>
+
+                <ul class="mission-list">
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Deliver world-class lighting products with superior quality.
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Drive innovation through advanced engineering and technology.
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Build long-term partnerships with dealers and customers.
+
+                    </li>
+
+                    <li>
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Support the global entertainment lighting industry.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
-<!-- ============ JOURNEY / TIMELINE ============ -->
-<section class="section-pad">
-  <div class="container">
-    <div class="section-head center" data-reveal><span class="tag">Our Journey</span><h2>Milestones Along <span class="text-orange">The Way</span></h2></div>
-    <div class="timeline" data-stagger>
-      <div class="tl-item"><div class="tl-dot"></div><h5>Company Established</h5><p>Founded with a passion for lighting excellence.</p></div>
-      <div class="tl-item"><div class="tl-dot"></div><h5>Product Expansion</h5><p>Launched a wide range of professional fixtures.</p></div>
-      <div class="tl-item"><div class="tl-dot"></div><h5>Dealer Network Growth</h5><p>Expanded across India and abroad.</p></div>
-      <div class="tl-item"><div class="tl-dot"></div><h5>Global Presence</h5><p>Trusted in events and installations worldwide.</p></div>
-      <div class="tl-item"><div class="tl-dot"></div><h5>Innovation Continues</h5><p>Setting new benchmarks in the lighting industry.</p></div>
+<section class="journey section-pad">
+
+    <div class="container">
+
+        <div class="section-head center">
+
+            <span class="section-tag">
+
+                OUR JOURNEY
+
+            </span>
+
+            <h2>
+
+                Milestones Along
+
+                <span>The Way</span>
+
+            </h2>
+
+            <p>
+
+                Every milestone represents our commitment to innovation,
+                quality and customer satisfaction.
+
+            </p>
+
+        </div>
+
+        <div class="journey-grid">
+
+            <div class="journey-card">
+
+                <span class="journey-year">2010</span>
+
+                <div class="journey-icon">
+
+                    <i class="fa-solid fa-building"></i>
+
+                </div>
+
+                <h4>Company Established</h4>
+
+                <p>Started with a vision to deliver world-class professional lighting solutions.</p>
+
+            </div>
+
+            <div class="journey-card">
+
+                <span class="journey-year">2014</span>
+
+                <div class="journey-icon">
+
+                    <i class="fa-solid fa-lightbulb"></i>
+
+                </div>
+
+                <h4>Product Expansion</h4>
+
+                <p>Introduced advanced entertainment and architectural lighting products.</p>
+
+            </div>
+
+            <div class="journey-card">
+
+                <span class="journey-year">2018</span>
+
+                <div class="journey-icon">
+
+                    <i class="fa-solid fa-users"></i>
+
+                </div>
+
+                <h4>Dealer Network</h4>
+
+                <p>Expanded our dealer network across India and international markets.</p>
+
+            </div>
+
+            <div class="journey-card">
+
+                <span class="journey-year">2022</span>
+
+                <div class="journey-icon">
+
+                    <i class="fa-solid fa-earth-americas"></i>
+
+                </div>
+
+                <h4>Global Presence</h4>
+
+                <p>Lighting solutions trusted for events and installations worldwide.</p>
+
+            </div>
+
+            <div class="journey-card">
+
+                <span class="journey-year">Today</span>
+
+                <div class="journey-icon">
+
+                    <i class="fa-solid fa-rocket"></i>
+
+                </div>
+
+                <h4>Innovation Continues</h4>
+
+                <p>Developing next-generation lighting technologies for the future.</p>
+
+            </div>
+
+        </div>
+
     </div>
-  </div>
+
 </section>
 
-<!-- ============ TEAM ============ -->
-<section class="section-pad" style="background:var(--bg-alt)">
-  <div class="container">
-    <div class="section-head center" data-reveal><span class="tag">Meet The Team</span><h2>The People Behind <span class="text-orange">BSM</span></h2></div>
-    <div class="grid team-grid" data-stagger>
-      <div class="team-card"><div class="tphoto"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Founder & CEO"></div><h4>Arvind Menon</h4><span>Founder &amp; CEO</span></div>
-      <div class="team-card"><div class="tphoto"><img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Head of Engineering"></div><h4>Priya Nair</h4><span>Head of Engineering</span></div>
-      <div class="team-card"><div class="tphoto"><img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Global Sales Director"></div><h4>Karthik Iyer</h4><span>Global Sales Director</span></div>
-      <div class="team-card"><div class="tphoto"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Product Design Lead"></div><h4>Sneha Reddy</h4><span>Product Design Lead</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ ACHIEVEMENTS / STATS ============ -->
-<div class="container stats-strip" style="margin-top:0" data-reveal>
-  <div class="stats-card">
-    <div class="stat-item"><i class="fa-solid fa-calendar-check"></i><h3><span data-count="15">0</span>+</h3><span>Years Experience</span></div>
-    <div class="stat-item"><i class="fa-solid fa-bag-shopping"></i><h3><span data-count="200">0</span>+</h3><span>Premium Products</span></div>
-    <div class="stat-item"><i class="fa-solid fa-people-group"></i><h3><span data-count="500">0</span>+</h3><span>Dealer Network</span></div>
-    <div class="stat-item"><i class="fa-solid fa-globe"></i><h3><span data-count="50">0</span>+</h3><span>Countries</span></div>
-    <div class="stat-item"><i class="fa-solid fa-trophy"></i><h3><span data-count="1000">0</span>+</h3><span>Successful Projects</span></div>
-  </div>
-</div>
 
 <!-- ============ CTA ============ -->
 <section class="section-pad">

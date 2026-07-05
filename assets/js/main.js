@@ -372,3 +372,326 @@ const heroSwiper = new Swiper(".heroSwiper",{
     }
 
 });
+
+
+const selectFancy = document.querySelector(".select-fancy");
+
+if (selectFancy) {
+
+    selectFancy.addEventListener("change", function () {
+
+        const value = this.value;
+
+        console.log(value);
+
+    });
+
+}
+
+const gridBtn = document.querySelector(".view-toggle button:first-child");
+const listBtn = document.querySelector(".view-toggle button:last-child");
+const productGrid = document.querySelector(".product-grid");
+
+if (gridBtn && listBtn && productGrid) {
+
+    gridBtn.onclick = () => {
+
+        productGrid.classList.remove("list-view");
+        productGrid.classList.add("grid-view");
+
+        gridBtn.classList.add("active");
+        listBtn.classList.remove("active");
+
+    };
+
+    listBtn.onclick = () => {
+
+        productGrid.classList.remove("grid-view");
+        productGrid.classList.add("list-view");
+
+        listBtn.classList.add("active");
+        gridBtn.classList.remove("active");
+
+    };
+
+}
+
+/* ==========================================
+   PRODUCT CATEGORY FILTER
+========================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Left Sidebar Categories மட்டும்
+    const categoryLinks = document.querySelectorAll(".cat-list a[data-category]");
+
+    const productCards = document.querySelectorAll(".product-card");
+
+    if (!categoryLinks.length || !productCards.length) return;
+
+    categoryLinks.forEach(link => {
+
+        link.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            const category = this.dataset.category;
+
+            categoryLinks.forEach(item => item.classList.remove("active"));
+
+            this.classList.add("active");
+
+            productCards.forEach(card => {
+
+                const cardCategory = card.dataset.category;
+
+                if (category === "all" || cardCategory === category) {
+
+                    card.style.display = "";
+
+                } else {
+
+                    card.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+    });
+
+});
+
+/* =====================================================
+   PRODUCT DETAIL DATABASE
+===================================================== */
+
+const PRODUCT_DATA = {
+
+    1: {
+        id: 1,
+        category: "Beam Lights",
+        badge: "New Arrival",
+        title: "BSM Beam 380",
+        subtitle: "380W Beam Moving Head Light",
+        price: "₹72,000",
+        image: "assets/images/products/1.webp",
+        power: "380W",
+        effect: "18 Prism",
+        beam: "2.0°",
+        description: "The BSM Beam 380 is a professional 380W moving head beam light designed for concerts, stages, clubs and rental applications."
+    },
+
+    2: {
+        id: 2,
+        category: "Wash Lights",
+        badge: "Popular",
+        title: "BSM Wash 1940",
+        subtitle: "19 × 40W RGBW Zoom Wash",
+        price: "₹68,000",
+        image: "assets/images/products/2.webp",
+        power: "760W",
+        effect: "RGBW Zoom",
+        beam: "6° - 60°",
+        description: "Professional RGBW Zoom Wash moving head with smooth dimming and wide zoom range."
+    },
+
+    3: {
+        id: 3,
+        category: "LED PAR",
+        badge: "Best Seller",
+        title: "BSM LED PAR 1815",
+        subtitle: "18 × 15W RGBWA+UV",
+        price: "₹18,500",
+        image: "assets/images/products/3.webp",
+        power: "270W",
+        effect: "RGBWA+UV",
+        beam: "25°",
+        description: "High performance LED PAR suitable for stage, wedding and event lighting."
+    },
+
+    4: {
+        id: 4,
+        category: "Laser Systems",
+        badge: "Professional",
+        title: "BSM Laser RGB 3W",
+        subtitle: "RGB Animation Laser",
+        price: "₹95,000",
+        image: "assets/images/products/4.webp",
+        power: "3W",
+        effect: "ILDA + DMX",
+        beam: "RGB",
+        description: "Professional RGB laser system for concerts, clubs and laser shows."
+    },
+
+    5: {
+        id: 5,
+        category: "Strobe Lights",
+        badge: "Hot",
+        title: "BSM Strobe 1500",
+        subtitle: "1500W LED Strobe",
+        price: "₹25,000",
+        image: "assets/images/products/5.webp",
+        power: "1500W",
+        effect: "Variable Strobe",
+        beam: "120°",
+        description: "Powerful LED strobe light for concerts and stage productions."
+    },
+
+    6: {
+        id: 6,
+        category: "Controllers",
+        badge: "Smart",
+        title: "BSM Controller 1024",
+        subtitle: "Professional DMX Controller",
+        price: "₹42,000",
+        image: "assets/images/products/6.webp",
+        power: "100W",
+        effect: "1024 Channels",
+        beam: "--",
+        description: "Professional DMX lighting controller with touch display."
+    },
+
+    7: {
+        id: 7,
+        category: "DMX Solutions",
+        badge: "Popular",
+        title: "BSM DMX Splitter 8",
+        subtitle: "8 Port DMX Splitter",
+        price: "₹6,500",
+        image: "assets/images/products/7.webp",
+        power: "50W",
+        effect: "8 Output",
+        beam: "--",
+        description: "Optically isolated professional DMX splitter."
+    },
+
+    8: {
+        id: 8,
+        category: "Pro Audio",
+        badge: "Pro Audio",
+        title: "BSM Line Array LA-210",
+        subtitle: "800W RMS Line Array",
+        price: "₹85,000",
+        image: "assets/images/products/8.webp",
+        power: "800W",
+        effect: "Passive",
+        beam: "--",
+        description: "Professional line array speaker system."
+    },
+
+    9: {
+        id: 9,
+        category: "Hybrid Moving Head",
+        badge: "New",
+        title: "BSM Hybrid 420",
+        subtitle: "420W Hybrid Moving Head",
+        price: "₹1,18,000",
+        image: "assets/images/products/9.webp",
+        power: "420W",
+        effect: "Beam / Spot / Wash",
+        beam: "2°",
+        description: "Professional hybrid moving head fixture."
+    },
+
+    10: {
+        id: 10,
+        category: "Follow Spot",
+        badge: "Professional",
+        title: "BSM Follow Spot 1200",
+        subtitle: "1200W Follow Spot",
+        price: "₹58,500",
+        image: "assets/images/products/10.webp",
+        power: "1200W",
+        effect: "Manual Zoom",
+        beam: "10°",
+        description: "Professional follow spot light."
+    },
+
+    11: {
+        id: 11,
+        category: "Blinder Lights",
+        badge: "Sale",
+        title: "BSM COB Blinder",
+        subtitle: "2 × 100W COB",
+        price: "₹19,500",
+        image: "assets/images/products/11.webp",
+        power: "200W",
+        effect: "Warm White",
+        beam: "120°",
+        description: "Professional COB audience blinder."
+    },
+
+    12: {
+        id: 12,
+        category: "Moving Head",
+        badge: "Premium",
+        title: "BSM Moving Head 600",
+        subtitle: "600W CMY Moving Head",
+        price: "₹1,42,000",
+        image: "assets/images/products/12.webp",
+        power: "600W",
+        effect: "CMY Mixing",
+        beam: "2°",
+        description: "Professional 600W moving head fixture."
+    }
+
+};
+/* =====================================================
+   PRODUCT DETAIL LOADER
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Product Detail Page-ல் இல்லையென்றால் exit
+    if (!document.getElementById("productTitle")) return;
+
+    // URL-ல இருந்து id எடு
+    const params = new URLSearchParams(window.location.search);
+    const productId = params.get("id") || "1";
+
+    const product = PRODUCT_DATA[productId];
+
+    if (!product) return;
+
+    // Breadcrumb
+    document.getElementById("breadcrumbCategory").textContent = product.category;
+    document.getElementById("breadcrumbProduct").textContent = product.title;
+
+    // Main Content
+    document.getElementById("productBadge").textContent = product.badge;
+    document.getElementById("productTitle").textContent = product.title;
+    document.getElementById("productSubtitle").textContent = product.subtitle;
+    document.getElementById("productDescription").textContent = product.description;
+
+    // Image
+    document.getElementById("mainImage").src = product.image;
+    document.getElementById("mainImage").alt = product.title;
+
+    // Thumbnails
+    document.querySelectorAll(".thumbImage").forEach(img => {
+        img.src = product.image;
+        img.alt = product.title;
+    });
+
+    // Price
+    document.getElementById("productPrice").innerHTML =
+        `${product.price}
+        <small style="font-size:13px;color:var(--text-soft);font-weight:400">
+            / Unit
+        </small>`;
+
+    // Specs
+    document.getElementById("specPower").textContent = product.power;
+    document.getElementById("specEffect").textContent = product.effect;
+    document.getElementById("specBeam").textContent = product.beam;
+
+    // Technical Specification Table
+    const model = document.getElementById("specModel");
+    if (model) model.textContent = product.title;
+
+    const light = document.getElementById("specLightSource");
+    if (light) light.textContent = product.subtitle;
+
+});
